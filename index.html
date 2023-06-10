@@ -4,10 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/847ed7a908.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>rui guan</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <i class="fa-solid fa-bars fa-lg" style="color: #e5f4e3;"></i>
+        <ul>
+            <li>Design</li>
+            <li>Code</li>
+            <li>About</li>
+        </ul>
+    </header>
+    <main>
+        <section class="openning">
+            <p id="open"><span id="hi">Hi,</span> my name is <span id="ruiguan">rui guan</span>. I'm an Architect and a Creative Coder.</p>
+        </section>
+        <section class="buttons">
+            <div>
+                <p>I build in the</p>
+                <button class="button" role="button">physical.</button>
+            </div>
+            <div>
+                <p>I also <span id="build">&lt; build &gt;</span> in the</p>
+                <button class="button" role="button">virtual.</button>
+            </div>
+        </section>
+        <section class="physical">
+            <section class="carousel" aria-label="Gallery">
+                <ol class="carousel__viewport">
+                  <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper">
+                        <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+                        <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+                        <a href="" class="physical-text">Urban Design</a>
+                        <div class="image-container">
+                            <img src="" id="urban-design">
+                        </div>
+                        <!-- <img src="images/urbandesign.jpg" alt="" class="physical-images"> -->
+                    </div>
+                  </li>
+                  <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+                        <a href="" class="physical-text">Architecture</a>
+                        <img src="images/architecture.jpg" alt="" class="physical-images">
+                  </li>
+                  <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+                        <a href="" class="physical-text">Exhibition</a>
+                        <img src="images/exhibition.jpg" alt="" class="physical-images">
+                  </li>
+                  <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+                    <div class="carousel__snapper"></div>
+                        <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+                        <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+                        <a href="" class="physical-text">Interiors</a>
+                        <img src="images/interiors.jpg" alt="" class="physical-images">
+                  </li>
+                </ol>
+                <aside class="carousel__navigation">
+                  <ol class="carousel__navigation-list">
+                    <li class="carousel__navigation-item">
+                      <a href="#carousel__slide1"
+                         class="carousel__navigation-button">Go to slide 1</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                      <a href="#carousel__slide2"
+                         class="carousel__navigation-button">Go to slide 2</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                      <a href="#carousel__slide3"
+                         class="carousel__navigation-button">Go to slide 3</a>
+                    </li>
+                    <li class="carousel__navigation-item">
+                      <a href="#carousel__slide4"
+                         class="carousel__navigation-button">Go to slide 4</a>
+                    </li>
+                  </ol>
+                </aside>
+              </section>
+            <div class="text-right">
+                <div class="projectinfo">
+                    <h1>Project Name</h1>
+                    <p>Project info</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam non ipsum sodales rhoncus id sed magna. Curabitur id turpis vel sem laoreet consectetur. Integer eget justo nec elit fringilla dapibus.</p>
+                </div>
+                <div  class="see-more">
+                    <p>See more projects in <a href="">Urban Design</a></p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+
+
+
+
+
 </body>
 </html>

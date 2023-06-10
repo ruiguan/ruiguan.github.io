@@ -1,0 +1,315 @@
+* {
+    font-family: urbanist;
+    font-size: 24px;
+    color: #e5f4e3;
+}
+
+body {
+    background-color: black;
+}
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 64px;
+}
+
+header ul {
+    display: flex;
+    gap: 48px;
+}
+
+header li {
+    list-style: none;
+}
+
+/* main */
+main {
+    margin: 0 160px;
+}
+
+
+/* openning section */
+.openning {
+    width: 60%;
+}
+
+#open {
+    font-weight: 200;
+    font-size: 64px;
+}
+
+#hi {
+    font-weight: 900;
+    font-size: 128px;
+    margin: 0;
+}
+
+#ruiguan {
+    font-weight: 200;
+    font-size: 64px;
+}
+
+/* button section */
+
+.buttons p {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#build {
+    font-style: italic;
+    padding: 0 8px;
+    background-color: #e5f4e3;
+    border-radius: 12px;
+    color: rgb(154, 48, 48);
+}
+
+.buttons div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px;
+}
+
+.button {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 1px;
+    width: 180px;
+    height: 50px;
+    margin: 0 24px;
+    outline: 0;
+    border: 1px solid #e5f4e3;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+  
+.button:after {
+    content: "";
+    background-color: rgb(154, 48, 48);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 8px;
+    left: 8px;
+    transition: 0.2s;
+}
+  
+.button:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+/* physical section */
+
+.physical {
+    display: flex;
+    margin: 64px 0;
+    align-items: flex-end;
+}
+
+/* text on the right */
+    .text-right{
+        width: 40%;
+    }
+
+    .projectinfo {
+        margin-left: 48px;
+        padding-left: 24px;
+        border-left: solid #e5f4e3 5px;
+    }
+
+    .see-more {
+        margin-top: 16px;
+        margin-left: 48px;
+        padding-left: 29px;
+    }
+
+    .text-right p, .text-right a {
+        font-size: 16px;
+        margin: 4px 0;
+    }
+
+    .projectinfo h1 {
+        margin: 0;
+    }
+
+/* carousel on the left */
+    * {
+        scrollbar-color: transparent transparent; /* thumb and track color */
+        scrollbar-width: 0px;
+    }
+    
+    *::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: none;
+    }
+    
+    * {
+        -ms-overflow-style: none;
+    }
+    
+    ol, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .carousel {
+        width: 60%;
+        height: auto;
+        perspective: 100px;
+    }
+    
+    .carousel__viewport {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        overflow: hidden;
+    }
+
+    .carousel__slide {
+        position: relative;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .carousel__snapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: center;
+    }
+    
+    .physical-text {
+        font-size: 48px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    .image-container {
+        margin: 0 16px 16px 0;
+        border: #e5f4e3 solid 1px;
+        z-index: 1;
+    }
+
+
+    .image-container:after {
+        content: "";
+        background-image: url(/images/urbandesign.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        top: 16px;
+        left: 16px;
+        transition: 0.2s;
+    }
+      
+    .image-container:hover::after {
+        top: 0px;
+        left: 0px;
+    }
+    
+
+    #urban-design {
+        width: 100%;
+        height: 384px;
+
+    }
+
+    .physical-images {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+   
+    }
+
+    .carousel__navigation {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+    }
+    
+    .carousel__navigation-list,
+    .carousel__navigation-item {
+        display: inline-block;
+    }
+    
+    .carousel__navigation-button {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #333;
+        background-clip: content-box;
+        border: 0.25rem solid transparent;
+        border-radius: 50%;
+        font-size: 0;
+        transition: transform 0.1s;
+    }
+    
+    .carousel::before,
+    .carousel::after,
+    .carousel__prev,
+    .carousel__next {
+        position: absolute;
+        top: 0;
+        width: 30%;
+        height: 100%;
+        border-radius: 50%;
+        font-size: 0;
+        z-index: 2;
+    }
+    
+    .carousel::before,
+    .carousel__prev {
+        left: 0;
+    }
+    
+    .carousel::after,
+    .carousel__next {
+        right: 0;
+    }
+    
+    .carousel::before,
+    .carousel::after {
+        content: '';
+        z-index: 2;
+        background-color: rgb(154, 48, 48, 0.2);
+        pointer-events: none;
+    }
+    
