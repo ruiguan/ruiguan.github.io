@@ -1,33 +1,60 @@
-// Generate random RGB color values
-function getRandomColor() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    return `rgb(${r}, ${g}, ${b})`;
-}
+const move1Radio = document.getElementById("architecture");
+const move2Radio = document.getElementById("urbandesign");
+const move3Radio = document.getElementById("exhibition");
+const move4Radio = document.getElementById("interior");
 
-// Create a mesh gradient effect
-function createMeshGradient() {
-    const meshBg = document.getElementById('mesh-bg');
+const movingElement = document.getElementById("carousel");
+const slider = document.getElementById("slider")
 
-    // Generate the CSS gradient string
-    let gradient = 'linear-gradient(to right, ';
-    for (let i = 0; i < 10; i++) {
-        const color1 = getRandomColor();
-        const color2 = getRandomColor();
-        gradient += `${color1}, ${color2}`;
-        if (i < 9) {
-            gradient += ', ';
-        }
+const radioButtons = document.querySelectorAll("input[name='move']");
+const textElements = document.querySelectorAll(".text-right")
+
+console.log(radioButtons)
+console.log(textElements)
+
+radioButtons.forEach(function(radioButton) {
+    radioButton.addEventListener("change",function() {
+        textElements.forEach(function(textElement) {
+            textElement.style.display = "none";
+        });
+        const selectedValue = this.value;
+        console.log(selectedValue);
+        const selectedTextElements = document.querySelectorAll("."+selectedValue);
+        console.log(selectedTextElements);
+            selectedTextElements.forEach(function(selectedTextElement) {
+                selectedTextElement.style.display = "Block";
+            });
+    });
+});
+
+move1Radio.addEventListener("change", function() {
+  if (move1Radio.checked) {
+    movingElement.style.transform = "translateX(0px)";
+    slider.style.left= "12.5%";
+    slider.style.animationName = "input1";
+  }
+});
+
+move2Radio.addEventListener("change", function() {
+  if (move2Radio.checked) {
+    movingElement.style.transform = "translateX(-105%)";
+    slider.style.left= "37.5%";
+    slider.style.animationName = "input2";
+  }
+});
+
+move3Radio.addEventListener("change", function() {
+  if (move3Radio.checked) {
+    movingElement.style.transform = "translateX(-210%)";
+    slider.style.left= "62.5%";
+    slider.style.animationName = "input3";
+  }
+});
+
+move4Radio.addEventListener("change", function() {
+    if (move4Radio.checked) {
+      movingElement.style.transform = "translateX(-315%)";
+      slider.style.left= "87.5%";
+      slider.style.animationName = "input4";
     }
-    gradient += ')';
-
-    // Apply the gradient as the background
-    meshBg.style.background = gradient;
-
-    // Schedule the next gradient change after 3 seconds
-    setTimeout(createMeshGradient, 3000);
-}
-
-// Start the mesh gradient effect
-createMeshGradient();
+  });
