@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://kit.fontawesome.com/847ed7a908.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -35,80 +35,77 @@
             </div>
         </section>
         <section class="physical">
-            <section class="carousel" aria-label="Gallery">
-                <ol class="carousel__viewport">
-                  <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-                    <div class="carousel__snapper">
-                        <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
-                        <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
-                        <a href="" class="physical-text">Urban Design</a>
-                        <div class="image-container">
-                            <img src="" id="urban-design">
-                        </div>
-                        <!-- <img src="images/urbandesign.jpg" alt="" class="physical-images"> -->
-                    </div>
-                  </li>
-                  <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                        <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
-                        <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
-                        <a href="" class="physical-text">Architecture</a>
-                        <img src="images/architecture.jpg" alt="" class="physical-images">
-                  </li>
-                  <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                        <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
-                        <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
-                        <a href="" class="physical-text">Exhibition</a>
-                        <img src="images/exhibition.jpg" alt="" class="physical-images">
-                  </li>
-                  <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-                    <div class="carousel__snapper"></div>
-                        <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
-                        <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
-                        <a href="" class="physical-text">Interiors</a>
-                        <img src="images/interiors.jpg" alt="" class="physical-images">
-                  </li>
-                </ol>
-                <aside class="carousel__navigation">
-                  <ol class="carousel__navigation-list">
-                    <li class="carousel__navigation-item">
-                      <a href="#carousel__slide1"
-                         class="carousel__navigation-button">Go to slide 1</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                      <a href="#carousel__slide2"
-                         class="carousel__navigation-button">Go to slide 2</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                      <a href="#carousel__slide3"
-                         class="carousel__navigation-button">Go to slide 3</a>
-                    </li>
-                    <li class="carousel__navigation-item">
-                      <a href="#carousel__slide4"
-                         class="carousel__navigation-button">Go to slide 4</a>
-                    </li>
-                  </ol>
-                </aside>
-              </section>
-            <div class="text-right">
-                <div class="projectinfo">
-                    <h1>Project Name</h1>
-                    <p>Project info</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam non ipsum sodales rhoncus id sed magna. Curabitur id turpis vel sem laoreet consectetur. Integer eget justo nec elit fringilla dapibus.</p>
+          <div class="carousel-viewport">
+            <div class="image-frame"></div>
+            <div class="carousel" id="carousel">
+                <div class="image-container">
+                  <a href="" class="image-box" id="image-box1">Architecture</a>
                 </div>
-                <div  class="see-more">
-                    <p>See more projects in <a href="">Urban Design</a></p>
+                <div class="image-container">
+                  <a href="" class="image-box" id="image-box2">Urban Design</a>
+                </div>
+                <div class="image-container">
+                  <a href="" class="image-box" id="image-box3">Exhibition</a>
+                </div>
+                <div class="image-container">
+                  <a href="" class="image-box" id="image-box4">Interior</a>
                 </div>
             </div>
+          </div>
+          <div class="radio-buttons">
+            <div id="labels">
+              <span id="slider"></span>
+              <label for="architecture"></label>
+              <input type="radio" name="move" id="architecture" value="project-1">
+              <label for="urbandesign"></label>
+              <input type="radio" name="move" id="urbandesign" value="project-2">
+              <label for="exhibition"></label>
+              <input type="radio" name="move" id="exhibition" value="project-3">
+              <label for="interior"></label>
+              <input type="radio" name="move" id="interior" value="project-4">
+            </div>
+          </div>
+          <div class="text-right-top">
+              <div class="projectinfo text-right project-1">
+                  <h1>Project 1</h1>
+                  <p>Project info</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam non ipsum sodales rhoncus id sed magna. Curabitur id turpis vel sem laoreet consectetur. Integer eget justo nec elit fringilla dapibus.</p>
+              </div>
+              <div class="projectinfo text-right project-2">
+                <h1>Project 2</h1>
+                <p>Project info</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam non ipsum sodales rhoncus id sed magna. Curabitur id turpis vel sem laoreet consectetur. Integer eget justo nec elit fringilla dapibus.</p>
+              </div>
+              <div class="projectinfo text-right project-3">
+                <h1>Project 3</h1>
+                <p>Project info</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam non ipsum sodales rhoncus id sed magna. Curabitur id turpis vel sem laoreet consectetur. Integer eget justo nec elit fringilla dapibus.</p>
+              </div>
+              <div class="projectinfo text-right project-4">
+                <h1>Project 4</h1>
+                <p>Project info</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam non ipsum sodales rhoncus id sed magna. Curabitur id turpis vel sem laoreet consectetur. Integer eget justo nec elit fringilla dapibus.</p>
+              </div>
+          </div>
+        </div>
+          <div class="text-right-bottom">
+            <div class="text-right project-1">
+              <p>See more projects in <a href="">Architecture</a></p>
+            </div>
+            <div class="text-right project-2">
+              <p>See more projects in <a href="">Urban Design</a></p>
+            </div>
+            <div class="text-right project-3">
+              <p>See more projects in <a href="">Exhibition</a></p>
+            </div>
+            <div class="text-right project-4">
+              <p>See more projects in <a href="">Interior</a></p>
+            </div>
+        </div>
+        </section>
             
         </section>
     </main>
-
-
-
-
-
-
+<script src="script.js"></script>
 </body>
 </html>
