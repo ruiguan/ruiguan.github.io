@@ -114,7 +114,7 @@ main {
 
 .physical {
     display: grid;
-    margin: 64px 0;
+    margin: 128px 0;
     grid-template-columns: 60% 40%;
     grid-template-rows: 500px 50px;
     justify-content: center;
@@ -214,7 +214,6 @@ main {
     position: relative;
     height: 95%;
     width: 95%;
-
     box-sizing: border-box;
     cursor: pointer;
     font-size: 48px;
@@ -279,7 +278,7 @@ input[type="radio"]{
     right:1000%;
 }
 
-#slider{
+.slider{
     position: absolute;
     height: 16px;
     width: 16px;
@@ -293,14 +292,160 @@ input[type="radio"]{
     transition: 0.25s 0.05s ease-in-out;
 }
 
-#architecture:checked  ~ #slider{ animation-name: input1; left:12.5%; }
-#urbandesign:checked  ~ #slider{ animation-name: input2; left:37.5%; }
-#exhibition:checked  ~ #slider{ animation-name: input3; left:62.5%; }
-#interior:checked  ~ #slider{ animation-name: input4; left:87.5%; }
-
 @keyframes input1{ 30%, 70% { transform:scale(0.75); } }
 @keyframes input2{ 30%, 70% { transform:scale(0.75); } }
 @keyframes input3{ 30%, 70% { transform:scale(0.75); } }
 @keyframes input4{ 30%, 70% { transform:scale(0.75); } }
 
+
+/* virtual section */
+.virtual {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 500px 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 128px 0;
+}
+
+.virtual-viewport {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.virtual-buttons {
+    grid-column: 2;
+}
+
+.virtual-text {
+    margin-left: 0;
+    margin-right: 48px;
+}
+
+.project-6, .project-7, .project-8 {
+    display: none;
+}
+
+/* footer section */
+.footer{
+    display: flex;
+    padding: 48px 64px;
+    justify-content: space-between;
+}
+
+.footer p, .footer a, .credit-logo, .credit {
+    font-size: 16px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+@media only screen and (max-width: 1100px) {
+    main {
+        margin: 0 80px;
+    }
+
+    .getintouch {
+        display: none;
+    }
+} 
+
+@media only screen and (max-width: 900px) {
+    .openning {
+        width: 100%;
+    }
+
+    #open {
+        font-size: 48px;
+    }
+    
+    #hi {
+        font-size: 96px;
+        margin: 0;
+    }
+    
+    #ruiguan {
+        font-size: 48px;
+    }
+
+    .credit {
+        display: none;
+    }
+
+    .physical {
+        display: grid;
+        margin: 64px 0;
+        grid-template-columns: 100%;
+    }
+
+    .projectinfo {
+
+        margin: 36px 0 0;
+        padding-right: 10%;
+    }
+    
+    .text-right-bottom {
+        margin-left: 0;
+    }
+
+    .virtual {
+        display: grid;
+        margin: 64px 0;
+        grid-template-columns: 100%;
+    }
+    
+    .virtual-viewport {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .virtual-buttons {
+        grid-column: 1;
+    }
+    
+    .virtual-text {
+        margin-right: 0;
+    }
+    
+} 
+
+@media only screen and (max-width: 650px) {
+    main {
+        margin: 0 24px;
+    }
+
+    header {
+        padding: 24px;
+    }
+
+    .buttons p {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 24px;
  
+    }
+
+    .icons {
+        display: flex;
+    }
+    
+    .credit-logo {
+        display: none;
+    }
+
+    #build {
+        font-size: 16px;
+    }
+    
+    .button {
+        font-size: 16px;
+        width: 120px;
+        height: 36px;
+        margin: 0 12px;
+    }
+}
