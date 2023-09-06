@@ -26,6 +26,10 @@ header li {
     list-style: none;
 }
 
+header a{
+    text-decoration: none;
+}
+
 /* main */
 main {
     margin: 0 160px;
